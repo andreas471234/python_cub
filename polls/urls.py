@@ -13,10 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from howdy import views
+from django.urls import path
+from polls import views
+
+app_name = 'polls'
 
 urlpatterns = [
-    url(r'^$', views.HomePageView.as_view()),
-    url(r'^about/$', views.AboutPageView.as_view()), # Add this /about/ route
+    path('polls/', views.index, name='index'),
+    path('polls/<int:question_id>/', views.detail, name='detail'),
+    path('polls/<int:question_id>/results/', views.results, name='results'),
+    path('polls/<int:question_id>/vote/', views.vote, name='vote'),
 ]

@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import TemplateView
+
+# for polls
+from django.http import Http404
+from django.http import HttpResponse
 
 # Create your views here.
 class HomePageView(TemplateView):
