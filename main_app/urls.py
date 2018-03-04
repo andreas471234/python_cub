@@ -20,5 +20,5 @@ app_name = 'main_app'
 
 urlpatterns = [
     url(r'^$', views.HomePageView.as_view(), name="index"),
-    url(r'^about/', views.AboutPageView.as_view(), name="about_me"), # Add this /about/ route
+    # url(r'^about/', views.AboutPageView.as_view(), name="about_me"), # Add this /about/ route
 ]

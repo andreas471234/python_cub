@@ -130,3 +130,15 @@ MEDIA_ROOT = u'/home/andreas47/mysite/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/andreas47/mysite/static'
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = ''
+MEDIA_URL = ''
+STATIC_ROOT = ''
+STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
